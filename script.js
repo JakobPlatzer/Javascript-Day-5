@@ -155,3 +155,59 @@ document.getElementById("eagleDescription").innerHTML = eagle.description();
 document.getElementById("crocodileDescription").innerHTML = crocodile.description();
 
 // Cars
+
+class Car {
+    brand;
+    model;
+    type;
+    availableColors;
+    constructor (cbrand, cmodel, ctype, cavailableColors) {
+        this.brand = cbrand;
+        this.model = cmodel;
+        this.type = ctype;
+        this.availableColors = cavailableColors;
+    }
+    description() {
+        return `The ${this.model} is a ${this.type} by ${this.brand} and it comes in ${this.availableColors}.`;
+    }
+}
+
+var toyotaVerso = new Car ("Toyota", "Verso", "minivan", "white, silver, brown and black");
+var ferrari812GTS = new Car ("Ferrari", "812GTS", "sportscar", "white, red and grey");
+var volkswagenTaigo = new Car ("Volkswagen", "Taigo", "SUV", "white, red, blue, green and black");
+
+console.log(toyotaVerso.description());
+console.log(ferrari812GTS.description());
+console.log(volkswagenTaigo.description());
+
+document.getElementById("toyotaVersoDescription").innerHTML = toyotaVerso.description();
+document.getElementById("ferrari812GTSDescription").innerHTML = ferrari812GTS.description();
+document.getElementById("volkswagenTaigoDescription").innerHTML = volkswagenTaigo.description();
+
+// Jobs
+
+class Profession {
+    job;
+    education;
+    location;
+    constructor (pjob, peducation, plocation) {
+        this.job = pjob;
+        this.education = peducation;
+        this.location = plocation;
+    }
+    description() {
+        return `A ${this.job} works in a ${this.location}. It takes ${this.education} to become a ${this.job}.`
+    }
+}
+
+var law = new Profession ("judge", "4 years", "court");
+var medicine = new Profession ("doctor", "6 years", "hospital");
+var architecture = new Profession ("architect", "3 years", "construction sites");
+
+console.log(law.description());
+console.log(medicine.description());
+console.log(architecture.description());
+
+document.getElementById("lawDescription").innerHTML = law.description();
+document.getElementById("medicineDescription").innerHTML = medicine.description();
+document.getElementById("architectureDescription").innerHTML = architecture.description();
