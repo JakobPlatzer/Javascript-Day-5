@@ -1,3 +1,5 @@
+// Basic Exercise Objects
+
 var dog = {
     class: "mammal",
     diet: "omnivore",
