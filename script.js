@@ -80,4 +80,41 @@ console.log(volkswagenTaigo.description());
 
 document.getElementById("volkswagenTaigoDescription").innerHTML = volkswagenTaigo.description();
 
+var medicine = {
+    job: "doctor",
+    education: "6 years",
+    location: "hospital",
+    description: function () {
+        return `A ${this.job} works in a ${this.location}. It takes ${this.education} to become a ${this.job}.`
+    }
+}
 
+console.log(medicine.description());
+
+document.getElementById("medicineDescription").innerHTML = medicine.description();
+
+var law = {
+    job: "judge",
+    education: "4 years",
+    location: "court",
+    description: function () {
+        return `A ${this.job} works in a ${this.location}. It takes ${this.education} to become a ${this.job}.`
+    }
+}
+
+console.log(law.description());
+
+document.getElementById("lawDescription").innerHTML = law.description();
+
+var architecture = {
+    job: "architect",
+    education: "3 years",
+    location: "construction sites",
+    description: function () {
+        return `A ${this.job} works on ${this.location}. It takes ${this.education} to become a ${this.job}.`
+    }
+}
+
+console.log(architecture.description());
+
+document.getElementById("architectureDescription").innerHTML = architecture.description();
