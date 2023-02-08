@@ -38,3 +38,46 @@ console.log(crocodile.description());
 
 document.getElementById("crocodileDescription").innerHTML = crocodile.description();
 
+var toyotaVerso = {
+    brand: "Toyota",
+    model: "Verso",
+    type: "minivan",
+    availableColors: "white, silver, brown and black",
+    description: function () {
+        return `The ${this.model} is a ${this.type} by ${this.brand} and it comes in ${this.availableColors}.`;
+    }
+}
+
+console.log(toyotaVerso.description());
+
+document.getElementById("toyotaVersoDescription").innerHTML = toyotaVerso.description();
+
+var ferrari812GTS = {
+    brand: "Ferrari",
+    model: "812GTS",
+    type: "sportscar",
+    availableColors: "white, red and grey",
+    description: function () {
+        return `The ${this.model} is a ${this.type} by ${this.brand} and it comes in ${this.availableColors}.`;
+    }
+}
+
+console.log(ferrari812GTS.description());
+
+document.getElementById("ferrari812GTSDescription").innerHTML = ferrari812GTS.description();
+
+var volkswagenTaigo = {
+    brand: "Volkswagen",
+    model: "Taigo",
+    type: "SUV",
+    availableColors: "white, red, blue, green and black",
+    description: function () {
+        return `The ${this.model} is a ${this.type} by ${this.brand} and it comes in ${this.availableColors}.`;
+    }
+}
+
+console.log(volkswagenTaigo.description());
+
+document.getElementById("volkswagenTaigoDescription").innerHTML = volkswagenTaigo.description();
+
+
