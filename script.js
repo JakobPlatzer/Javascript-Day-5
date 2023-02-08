@@ -1,5 +1,5 @@
 // Basic Exercise Objects
-
+/*
 var dog = {
     class: "mammal",
     diet: "omnivore",
@@ -119,4 +119,39 @@ var architecture = {
 
 console.log(architecture.description());
 
-document.getElementById("architectureDescription").innerHTML = architecture.description();
+document.getElementById("architectureDescription").innerHTML = architecture.description();*/
+
+
+// Basic Exercise Classes
+
+// Animals
+
+class Animal {
+    family;
+    class;
+    diet;
+    lifespan;
+    constructor (afamily, aclass, adiet, alifespan) {
+        this.family = afamily;
+        this.class = aclass;
+        this.diet = adiet;
+        this.lifespan = alifespan;
+    }
+    description() {
+        return `A/an ${this.family} is a/an ${this.class} and a/an ${this.diet} and can lives up to ${this.lifespan} years`
+    }
+}
+
+var dog = new Animal("dog", "mammal", "omnivore", "15");
+var eagle = new Animal("eagle", "bird", "carnivore", "35");
+var crocodile = new Animal("crocodile", "reptile", "carnivore", "70");
+
+console.log(dog.description());
+console.log(eagle.description());
+console.log(crocodile.description());
+
+document.getElementById("dogDescription").innerHTML = dog.description();
+document.getElementById("eagleDescription").innerHTML = eagle.description();
+document.getElementById("crocodileDescription").innerHTML = crocodile.description();
+
+// Cars
