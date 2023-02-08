@@ -138,21 +138,36 @@ class Animal {
         this.lifespan = alifespan;
     }
     description() {
-        return `A/an ${this.family} is a/an ${this.class} and a/an ${this.diet} and can lives up to ${this.lifespan} years`
+        return `A/an ${this.family} is a/an ${this.class} and a/an ${this.diet} and can live up to ${this.lifespan} years.`
     }
 }
 
-var dog = new Animal("dog", "mammal", "omnivore", "15");
-var eagle = new Animal("eagle", "bird", "carnivore", "35");
-var crocodile = new Animal("crocodile", "reptile", "carnivore", "70");
+class NewClass extends Animal {
+    habitat;
+
+    constructor (afamily, aclass, adiet, alifespan, ahabitat) {
+        super(afamily, aclass, adiet, alifespan);
+        this.habitat = ahabitat;
+    }
+
+    habitatDescription() {
+        return super.description() + ` It often lives in ${this.habitat}.`
+    }
+
+
+}
+
+var dog = new NewClass("dog", "mammal", "omnivore", "15", "packs");
+var eagle = new NewClass("eagle", "bird", "carnivore", "35", "the mountains");
+var crocodile = new NewClass("crocodile", "reptile", "carnivore", "70", "swamps");
 
 console.log(dog.description());
 console.log(eagle.description());
 console.log(crocodile.description());
 
-document.getElementById("dogDescription").innerHTML = dog.description();
-document.getElementById("eagleDescription").innerHTML = eagle.description();
-document.getElementById("crocodileDescription").innerHTML = crocodile.description();
+document.getElementById("dogDescription").innerHTML = dog.habitatDescription();
+document.getElementById("eagleDescription").innerHTML = eagle.habitatDescription();
+document.getElementById("crocodileDescription").innerHTML = crocodile.habitatDescription();
 
 // Cars
 
